@@ -1,0 +1,30 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int t,i,n;
+    long int sum_squares,square_sums;
+    cin>>t;
+    for(i=0;i<t;i++){
+        cin>>n;
+        sum_squares=0;
+        
+        square_sums=(n*(n+1))/2;
+        square_sums=square_sums*square_sums;
+        
+        while(n>0){
+          sum_squares=n*n+sum_squares;
+          n--;  
+        }
+        
+        
+        cout<<square_sums-sum_squares<<endl;
+    }
+    return 0;
+}
